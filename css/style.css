@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    overflow: hidden;
 }
 
 ul {
@@ -74,7 +75,7 @@ main {
     .scrollable-container {
         max-height: 90vh;
         overflow-y: auto;
-        margin: 6vh 1vw 0vh 16vw;
+        margin: 6vh 1vw 10vh 16vw;
         padding: 5px;
         min-width: 83vw;
     }
@@ -102,14 +103,16 @@ main {
     }
 
     .recently-played-row,
-    .created-for-row {
+    .created-for-row,
+    .popular-artists-row {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 20px;
     }
 
     .recently-played-row div,
-    .created-for-row div {
+    .created-for-row div,
+    .popular-artists-row div {
         margin: 10px;
         text-align: center;
         line-height: 25px;
@@ -118,7 +121,8 @@ main {
     }
 
     .recently-played-row div img,
-    .created-for-row div img {
+    .created-for-row div img,
+    .popular-artists-row div img {
         width: 180px;
         height: 180px;
         object-fit: cover;
@@ -134,12 +138,6 @@ main {
         padding: 0;
     }
 
-    /* .recently-played-row div i:hover,
-    .created-for-row div i:hover {
-        visibility: visible;
-        filter: brightness(100%);
-    } */
-
     .recently-played-row div:hover img,
     .created-for-row div:hover img,
     .recently-played-row div:hover i,
@@ -147,6 +145,12 @@ main {
         filter: brightness(30%);
         visibility: visible;
     }
+
+    .popular-artists-row div img {
+        border-radius: 100%;
+    }
+
+
 
 
 
@@ -279,7 +283,7 @@ main {
         position: fixed;
         z-index: 999;
         width: 100vw;
-        height: 10vh;
+        min-height: 10vh;
         background-color: #282828;
         padding: 15px 10px;
         bottom: 0;
