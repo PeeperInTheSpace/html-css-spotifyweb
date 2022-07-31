@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 ul {
@@ -26,6 +27,10 @@ color: white;
 
 span {
     font-weight: 400;
+}
+
+p {
+    color: #6b6b6b;
 }
 
 /* HEADER SECTION */
@@ -69,7 +74,6 @@ main {
     .scrollable-container {
         max-height: 90vh;
         overflow-y: auto;
-        /* background-color: lightblue; */
         margin: 6vh 1vw 0vh 16vw;
         padding: 5px;
         min-width: 83vw;
@@ -79,6 +83,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 3vh;
     }
 
@@ -86,7 +91,6 @@ main {
         margin-right: 20px;
         color: #6b6b6b;
         padding: 5px;
-        font-weight: 600;
     }
 
     nav div:hover {
@@ -97,18 +101,56 @@ main {
         margin-bottom: 15px;
     }
 
-    .recently-played-row {
+    .recently-played-row,
+    .created-for-row {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 20px;
     }
 
-    .recently-played-row div img {
-        width: 150px;
-        height: 150px;
+    .recently-played-row div,
+    .created-for-row div {
+        margin: 10px;
+        text-align: center;
+        line-height: 25px;
+        max-width: 180px;
+        position: relative;
+    }
+
+    .recently-played-row div img,
+    .created-for-row div img {
+        width: 180px;
+        height: 180px;
         object-fit: cover;
     }
 
-    
+    .recently-played-row div i,
+    .created-for-row div i {
+        position: absolute;
+        color: white;
+        visibility: hidden;
+        top: 19%;
+        left: 33%;
+        padding: 0;
+    }
+
+    /* .recently-played-row div i:hover,
+    .created-for-row div i:hover {
+        visibility: visible;
+        filter: brightness(100%);
+    } */
+
+    .recently-played-row div:hover img,
+    .created-for-row div:hover img,
+    .recently-played-row div:hover i,
+    .created-for-row div:hover i {
+        filter: brightness(30%);
+        visibility: visible;
+    }
+
+
+
+
 
     /* SIDE MENU SECTION */
 
@@ -237,9 +279,9 @@ main {
         position: fixed;
         z-index: 999;
         width: 100vw;
-        min-height: 100px;
+        height: 10vh;
         background-color: #282828;
-        padding: 15px;
+        padding: 15px 10px;
         bottom: 0;
     }
 
@@ -248,11 +290,10 @@ main {
     .sub-left {
         display: flex;
         align-items: center;
-        width: 33.3%;
+        width: 30%;
     }
 
-    .sub-left i,
-    .sub-left p {
+    .sub-left i {
         color: #6b6b6b;
     }
 
@@ -274,7 +315,7 @@ main {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        width: 33.3%;
+        width: 40%;
     }
 
     .sub-middle-top {
@@ -298,7 +339,7 @@ main {
     }
 
     .playtimebar {
-        width: 80%;
+        min-width: 90%;
         margin: 15px 15px;
         height: 5px;
         border-radius: 30px;
@@ -336,12 +377,12 @@ main {
         display: flex;
         justify-content: flex-end;
         color: white;
-        width: 33.3%;
         align-items: center;
+        width: 30%;
     }
 
     .volumebar {
-        width: 20%;
+        min-width: 50%;
         height: 5px;
         border-radius: 30px;
         border: transparent;
@@ -410,9 +451,22 @@ main {
         flex-direction: column;
     }
 
+    .sub-left,
+    .sub-right {
+        transform: scale(0.6);
+    }
+
+    .sub-middle {
+        transform: scale(0.7);
+    }
+
+    footer {
+        padding: 0;
+    }
+
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) { 
+@media screen and (min-width: 481px) and (max-width: 920px) { 
 
     /* SIDE MENU SECTION */
 
@@ -420,9 +474,37 @@ main {
         display: none;
     }
 
+    .sidemenucontainer span,
+    .sidemenucontainer h3,
+    .sidemenucontainer .fa-plus,
+    .sidemenucontainer ul {
+        display: none;
+    }
+
+    .sidemenu-down hr {
+        display: none;
+    }
+
+    .fa-house,
+    .fa-magnifying-glass,
+    .fa-list-ul,
+    .fa--circle-arrow-down,
+    .fa-circle-user {
+        transform: scale(1.5);
+    }
+
+    .sidemenu-up,
+    .sidemenu-down {
+        align-items: center;
+    }
+
+    .sub-left-right {
+        flex-direction: column;
+    }
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) { 
+@media screen and (min-width: 921px) and (max-width: 1024px) { 
 
     /* SIDE MENU SECTION */
 
