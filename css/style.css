@@ -18,6 +18,7 @@ button {
 
 i {
     padding-right: 10px;
+    cursor: pointer;
 }
 
 h4,
@@ -128,7 +129,9 @@ main {
     }
 
     .recently-played-row div i,
-    .created-for-row div i {
+    .created-for-row div i,
+    .recently-played-row div i,
+    .popular-artists-row div i {
         position: absolute;
         color: white;
         visibility: hidden;
@@ -139,8 +142,8 @@ main {
 
     .recently-played-row div:hover img,
     .created-for-row div:hover img,
-    .recently-played-row div:hover i,
-    .created-for-row div:hover i {
+    .recently-played-row div:hover img,
+    .popular-artists-row div:hover img {
         filter: brightness(30%);
         visibility: visible;
     }
@@ -148,12 +151,6 @@ main {
     .popular-artists-row div img {
         border-radius: 100%;
     }
-
-
-
-
-
-
 
     /* SIDE MENU SECTION */
 
